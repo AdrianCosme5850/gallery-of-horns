@@ -1,28 +1,25 @@
 import React from 'react';
 import HornedBeast from './HornedBeast.js'
+import data from './data.json'
+import Row from 'react-bootstrap/Row';
 class Main extends React.Component{
 render(){
+    let hornedBeasts = [];
+    data.forEach((newBeast, idx) =>{
+        hornedBeasts.push(
+            <HornedBeast
+            name={newBeast.title}
+            img={newBeast.image_url}
+            description={newBeast.description}
+            key={idx}
+            />
+        )
+    })
     return(
     <>
-        <HornedBeast
-         name = "Rhino"
-         img = "placeholder"
-         alt = "placeholder"
-         title = "placeholder"
-         description = "Horned beast from Africa"/>
-        <HornedBeast 
-        name = "Deer"
-        img ="placeholder"
-        alt ="placeholder"
-        title ="placeholder"
-        description = "Horned Beast?"
-        />
-        <HornedBeast
-        name = "Unicorn"
-        img ="placeholder"
-        alt = "placeholder"
-        title = "placeholder"
-        description = "Fantasy Horned beast"/>
+    <Row xs={4} md={4} lg={4}>
+    {hornedBeasts}
+    </Row>
     </>
     )
 }
