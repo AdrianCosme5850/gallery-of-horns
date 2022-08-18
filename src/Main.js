@@ -10,7 +10,6 @@ render(){
             description={newBeast.description}
             key={idx}
             modalOn={this.props.modalOn}
-            modalOff={this.props.modalOff}
             />} )
     return(
     <>
