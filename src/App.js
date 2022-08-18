@@ -15,14 +15,16 @@ class App extends React.Component {
   }
   modalOn = (image) => {
     this.setState({
-      showModal:this.state.showModal + true,
+      showModal: true,
       image: image
     }) 
   }
   modalOff = () => {
     this.setState({
-      showModal:this.state.showModal + false
+      showModal: false,
+      image: '',
     }) 
+    console.log(this.state.showModal);
   }
   render(){
     return (
@@ -30,10 +32,11 @@ class App extends React.Component {
        <Header/>
        <Main
        modalOn={this.modalOn}
-       modalOff={this.modalOff}
        data={data}/>
        <SelectedBeast
-       showModal={this.state.showModal}/>
+       showModal={this.state.showModal}
+       modalOff={this.modalOff}
+       image={this.state.image}/>
        <Footer/>
       </div>
     )
