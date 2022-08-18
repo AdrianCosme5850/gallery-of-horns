@@ -12,10 +12,13 @@ class HornedBeast extends React.Component{
             vote: this.state.vote + 1
         })
     }
+    bigPicture = () =>{
+        this.props.modalOn(this.props.img)
+    }
 render(){
     return(
         <Card bg= "secondary" border="success">
-            <Card.Img variant="top" src={this.props.img} onClick={this.countVotes}/>
+            <Card.Img variant="top" src={this.props.img} onClick={this.bigPicture}/>
             <Card.Body>
                 <Card.Title>{this.props.name}</Card.Title>
                 <Card.Text>

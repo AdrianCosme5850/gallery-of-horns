@@ -87,3 +87,8 @@ estimate: 30 minutes
 start time: 1410
 finish time: 1507
 Total time: 57 minutes
+
+Lab 3 time estimates
+Feature 1: Display Modal
+estimate: 45 minutes
+start time: 1258
