@@ -19,7 +19,7 @@ render(){
     return(
         <Card bg= "secondary" border="success">
             <Card.Img variant="top" src={this.props.img} onClick={this.bigPicture}/>
-            <Card.Body>
+            <Card.Body onClick={this.countVotes}>
                 <Card.Title>{this.props.name}</Card.Title>
                 <Card.Text>
                     {this.props.description}
