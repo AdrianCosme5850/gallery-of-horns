@@ -42,7 +42,8 @@ class App extends React.Component {
     this.state.filter === 'one' ? filteredBeasts = data.filter(beasts => beasts.horns === 1):
     this.state.filter === 'two' ? filteredBeasts = data.filter(beasts => beasts.horns === 2):
     this.state.filter === 'three' ? filteredBeasts = data.filter(beasts => beasts.horns === 3):
-    this.state.filter === 'more than three' ? filteredBeasts = data.filter(beasts => beasts.horns > 3): console.log('no filter')
+    this.state.filter === 'more than three' ? filteredBeasts = data.filter(beasts => beasts.horns > 3):
+     console.log('no filter')
     this.setState({
       data: filteredBeasts,
     })
